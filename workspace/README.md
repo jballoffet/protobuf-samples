@@ -9,8 +9,7 @@ To build the application, taking `{REPO_PATH}` as the base repository path, run 
 
 ```bash
 cd `{REPO_PATH}`/workspace/helloworld
-bazel build :greeter_server
-bazel build :greeter_client
+bazel build :helloworld
 ```
 
 ## Running
@@ -18,6 +17,5 @@ To run the application, taking `{REPO_PATH}` as the base repository path, run th
 
 ```bash
 cd `{REPO_PATH}`/workspace/helloworld
-bazel run :greeter_server
-bazel run :greeter_client
+bazel run :helloworld
 ```
