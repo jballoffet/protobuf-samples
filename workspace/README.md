@@ -1,4 +1,4 @@
-# gRPC C++ sample apps
+# Protocol Buffers C++ sample apps
 
 If you haven't built your docker image, just visit the [docker readme](../docker/README.md).
 
