@@ -18,6 +18,8 @@ int main(int argc, char* argv[]) {
   phone = person.add_phones();
   phone->set_number("22222222");
   phone->set_type(sample::Phone::HOME);
+  sample::Professor* professor = person.mutable_professor();
+  professor->set_rank("Associate");
 
   // Serialize proto.
   std::string data;
@@ -48,6 +50,7 @@ int main(int argc, char* argv[]) {
     }
     std::cout << phone.number() << std::endl;
   }
+  std::cout << "Professor rank: " << person2.professor().rank() << std::endl;
 
   return 0;
 }

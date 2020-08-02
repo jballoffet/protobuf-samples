@@ -4,9 +4,21 @@ package sample;
 
 import "phone.proto";
 
+message Student {
+  int32 class = 1; 
+}
+
+message Professor {
+  string rank = 1;
+}
+
 message Person {
   int32 id = 1;  // Unique ID number for this person.
   string name = 2;
   string email = 3;
   repeated Phone phones = 4;
+  oneof role {
+    Student student = 5;
+    Professor professor = 6;
+  }
 }
