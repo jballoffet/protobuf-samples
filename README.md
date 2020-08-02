@@ -1,14 +1,12 @@
 # Protocol Buffers C++ Samples
 
-This repository contains some basic sample applications to start working with Protocol Buffers (protobuf) in C++, using Bazel as the build system. It also provides everything needed to run them in a docker container.
+This repository contains some basic sample applications to start working with Protocol Buffers (protobuf) in C++, using Bazel as build system. It also provides everything needed to run them in a docker container.
 
 ## Project organization
 
 You'll find the following project organization:
 
 - workspace: workspace directory.
-  - helloworld: Hello World sample app.
-  - addressbook: Address Book sample app.
 - docker: docker related files.
 
 ## Installation
@@ -29,5 +27,5 @@ This repository is mantained by:
 * [Javier Balloffet](http://github.com/jballoffet)
 
 ## Original version
-Samples apps are based on:
+Sample apps are based on:
 * [https://github.com/protocolbuffers/protobuf/tree/master/examples](https://github.com/protocolbuffers/protobuf/tree/master/examples)

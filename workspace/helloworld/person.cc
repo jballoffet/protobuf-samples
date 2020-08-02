@@ -1,9 +1,7 @@
-#include <ctime>
-#include <fstream>
 #include <iostream>
 #include <string>
 
-#include "helloworld.pb.h"
+#include "person.pb.h"
 
 int main(int argc, char* argv[]) {
   sample::Person person;

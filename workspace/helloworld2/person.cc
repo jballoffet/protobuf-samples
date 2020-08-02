@@ -50,7 +50,9 @@ int main(int argc, char* argv[]) {
     }
     std::cout << phone.number() << std::endl;
   }
-  std::cout << "Professor rank: " << person2.professor().rank() << std::endl;
+  if (person2.has_professor()) {
+    std::cout << "Professor rank: " << person2.professor().rank() << std::endl;
+  }
 
   return 0;
 }

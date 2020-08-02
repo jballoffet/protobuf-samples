@@ -11,8 +11,8 @@ load("@rules_proto//proto:defs.bzl", "proto_library")
 # graph of the .proto files (i.e., proto imports) and serves as the provider
 # of .proto source files to the protocol compiler.
 proto_library(
-    name = "helloworld_proto",
-    srcs = ["helloworld.proto"],
+    name = "person_proto",
+    srcs = ["person.proto"],
 )
 
 # The cc_proto_library rule generates C++ code for a proto_library rule. It
@@ -20,13 +20,13 @@ proto_library(
 # proto_library targets, create a separate cc_proto_library target for each
 # of them.
 cc_proto_library(
-    name = "helloworld_cc_proto",
-    deps = [":helloworld_proto"],
+    name = "person_cc_proto",
+    deps = [":person_proto"],
 )
 
 # cc_library/cc_binary targets can depend on cc_proto_library targets.
 cc_binary(
-    name = "helloworld",
-    srcs = ["helloworld.cc"],
-    deps = [":helloworld_cc_proto"],
+    name = "person",
+    srcs = ["person.cc"],
+    deps = [":person_cc_proto"],
 )
