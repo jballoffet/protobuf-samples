@@ -11,6 +11,10 @@ int main(int argc, char* argv[]) {
   person.set_name("John Doe");
   person.set_email("jdoe@example.com");
 
+  // Print proto as string.
+  std::cout << "Person content:" << std::endl;
+  std::cout << person.DebugString() << std::endl;
+
   // Serialize proto.
   std::string data;
   person.SerializeToString(&data);
@@ -20,6 +24,7 @@ int main(int argc, char* argv[]) {
   person2.ParseFromString(data);
 
   // Read proto values.
+  std::cout << "Person2 content:" << std::endl;
   std::cout << "Person ID: " << person2.id() << std::endl; 
   std::cout << "Name: " << person2.name() << std::endl;
   std::cout << "Email: " << person2.email() << std::endl;
